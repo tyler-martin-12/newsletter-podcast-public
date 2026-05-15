@@ -4,7 +4,7 @@ Self-hosted pipeline for turning email newsletters into a private podcast feed. 
 
 Includes a small Whisper-WER eval workflow for checking generated audio against the cleaned source text. This is a personal project shared for reference, not a supported product.
 
-Blog post: https://example.com/newsletter-podcast-blog-post
+Blog post: https://tyler-alexander-martin.com/blog/newsletter-podcast/
 
 ## Stack
 
