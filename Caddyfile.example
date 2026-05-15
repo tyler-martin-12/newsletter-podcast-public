@@ -1,0 +1,24 @@
+podcast.example.com {
+	basicauth /feed.xml {
+		podcast_user $2a$14$replace_with_caddy_hash_password_output
+	}
+
+	basicauth /episodes/* {
+		podcast_user $2a$14$replace_with_caddy_hash_password_output
+	}
+
+	handle /feed.xml {
+		root * /var/www/newsletter-podcast
+		file_server
+	}
+
+	handle /cover.jpg {
+		root * /var/www/newsletter-podcast
+		file_server
+	}
+
+	handle_path /episodes/* {
+		root * /var/lib/newsletter-podcast/episodes
+		file_server
+	}
+}

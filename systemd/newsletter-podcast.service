@@ -1,0 +1,14 @@
+[Unit]
+Description=Newsletter podcast pipeline
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=newsletter-podcast
+Group=newsletter-podcast
+WorkingDirectory=/opt/newsletter-podcast
+Environment=NEWSLETTER_PODCAST_CONFIG=/etc/newsletter-podcast/config.yaml
+EnvironmentFile=-/etc/newsletter-podcast/env
+ExecStart=/opt/newsletter-podcast/.venv/bin/newsletter-podcast
+Nice=5

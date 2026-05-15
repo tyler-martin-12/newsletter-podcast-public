@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsletter-podcast"
+version = "0.1.0"
+description = "Self-hosted newsletter to private podcast pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "feedgen>=1.0,<2",
+  "filelock>=3,<4",
+  "imap-tools>=1,<2",
+  "kokoro>=0,<1",
+  "mutagen>=1,<2",
+  "pydantic>=2,<3",
+  "pydantic-settings>=2,<3",
+  "pydub>=0.25,<1",
+  "python-slugify>=8,<9",
+  "PyYAML>=6,<7",
+  "soundfile>=0.12,<1",
+  "trafilatura>=1,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1,<2",
+  "pytest>=8,<9",
+  "ruff>=0.6,<1",
+]
+eval = [
+  "certifi>=2024,<2027",
+  "faster-whisper>=1,<2",
+  "matplotlib>=3,<4",
+  "notebook>=7,<8",
+  "pandas>=2,<4",
+]
+
+[project.scripts]
+newsletter-podcast = "newsletter_podcast.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["feedgen.*", "kokoro", "pydub", "soundfile", "trafilatura", "yaml"]
+ignore_missing_imports = true

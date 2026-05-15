@@ -1,0 +1,25 @@
+imap:
+  host: imap.example.com
+  port: 993
+  username: newsletter-reader@example.com
+  password_env: IMAP_PASSWORD
+  folder: Newsletters
+  move_to_folder: null
+
+tts:
+  voice: af_bella
+  speed: 1.0
+  device: cpu
+
+output:
+  episodes_dir: /var/lib/newsletter-podcast/episodes
+  feed_path: /var/www/newsletter-podcast/feed.xml
+  base_url: https://podcast.example.com
+  state_db: /var/lib/newsletter-podcast/state.sqlite3
+  lock_path: /var/lib/newsletter-podcast/pipeline.lock
+
+feed:
+  title: My Newsletter Podcast
+  description: Private audio versions of email newsletters
+  cover_image: /var/www/newsletter-podcast/cover.jpg
+  retention_days: 30

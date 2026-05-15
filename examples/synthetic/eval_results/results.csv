@@ -1,0 +1,3 @@
+episode_id,source,title,duration_sec,whisper_model,overall_wer,substitutions,insertions,deletions,num_ref_words,number_error_rate,proper_noun_error_rate,attribution_error_rate,acronym_error_rate,selected_reference_start_word,selected_reference_end_word
+sample_001,Synthetic,The Project Gutenberg Library,32.66,faster-whisper:tiny,0.0,0,0,0,83,0.0,0.0,0.0,0.0,0,83
+sample_002,Synthetic,A Walk in the Public Domain,26.76,faster-whisper:tiny,0.025974,2,0,0,77,0.0,0.0,0.0,0.0,0,77

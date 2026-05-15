@@ -1,0 +1,11 @@
+[Unit]
+Description=Run newsletter podcast every 30 minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=30min
+Persistent=true
+Unit=newsletter-podcast.service
+
+[Install]
+WantedBy=timers.target
