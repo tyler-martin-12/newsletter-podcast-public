@@ -1,5 +1,7 @@
 # Newsletter Podcast
 
+![A pen-and-ink drawing of a tall stack of newspapers with headphones resting on top.](docs/assets/newsletter-stack.png)
+
 Self-hosted pipeline for turning email newsletters into a private podcast feed. It reads an IMAP folder, extracts clean article text, generates Kokoro-82M speech, writes MP3 episodes, and builds an RSS feed for podcast apps.
 
 Includes a small Whisper-WER eval workflow for checking generated audio against the cleaned source text. This is a personal project shared for reference, not a supported product.
