@@ -1,6 +1,6 @@
 # Newsletter Podcast
 
-![A pen-and-ink drawing of a tall stack of newspapers with headphones resting on top.](docs/assets/newsletter-stack.png)
+<img src="docs/assets/newsletter-stack.png" alt="A pen-and-ink drawing of a tall stack of newspapers with headphones resting on top." width="320">
 
 Self-hosted pipeline for turning email newsletters into a private podcast feed. It reads an IMAP folder, extracts clean article text, generates Kokoro-82M speech, writes MP3 episodes, and builds an RSS feed for podcast apps.
 
